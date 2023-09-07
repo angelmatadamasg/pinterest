@@ -1,0 +1,242 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'neue_haas_grotesk_text55roman';
+    src: url('../assets/fonts/nhaasgrotesktxpro-55rg-webfont.woff2') format('woff2'),
+         url('../assets/fonts/nhaasgrotesktxpro-55rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neue_haas_grotesk_text_pr65Md';
+    src: url('../assets/fonts/nhaasgrotesktxpro-65md-webfont.woff2') format('woff2'),
+         url('../assets/fonts/nhaasgrotesktxpro-65md-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neue_haas_grotesk_text_pr75Bd';
+    src: url('../assets/fonts/nhaasgrotesktxpro-75bd-webfont.woff2') format('woff2'),
+         url('../assets/fonts/nhaasgrotesktxpro-75bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family:'neue_haas_grotesk_text55roman', 'neue_haas_grotesk_text_pr65Md', 'neue_haas_grotesk_text_pr75Bd', sans-serif;
+    font-size: 16px;
+}
+
+.row-flex{
+    top: 0px;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    margin: 1% auto;    
+    display: flex;
+    align-content: center;    
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 55px;
+    width: 55px;
+    margin-top: 30px;
+    padding-left: 25px;    
+}
+
+#borde{
+    height: 48px;
+    min-width: 60px;
+    background-color: black;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    border-radius: 24px;
+}
+
+#ovalo{
+    text-decoration: none;
+}    
+
+.inicio{  
+    font-family: 'neue_haas_grotesk_text_pr65Md';
+    color: white;
+    cursor: pointer;
+}
+
+.enlace{
+    margin-top: 12px;
+    text-decoration: none;  
+    font-family: 'neue_haas_grotesk_text_pr65Md';    
+    color: black;    
+}
+
+#search-icon{
+    padding-left: 15px;;
+}
+
+.buscador{
+    background-color: #E1E1E1;   
+    border-radius: 24px;
+    width: auto;
+}
+
+.finder{
+    margin-left: 5px;
+    padding: 10px;
+    background-color: #E1E1E1;
+    border: none;   
+    border-radius: 24px;
+    width: auto;
+}
+
+.finder:focus{
+    outline: none;
+}
+
+#pinterest-icon{
+    width: 100%;
+}
+
+img{
+    border-radius: 15px;
+}
+
+#navbar-pinterest{
+    width: auto;
+    display: flex;
+    gap: 2rem;           
+}
+
+#user{
+    margin-right: 50px;
+}
+
+#content{
+    width: 93%;
+    margin-top: 30px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.card-image{    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.card-image picture{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image picture img{
+    width: 100%;
+    height: 100%;
+}
+
+.button{    
+    height: 48px;
+    min-width: 60px;
+    background-color: rgb(201, 44, 44);
+    color: white;
+    border: none;
+    font-weight: 300;
+    padding: 0.8rem 1rem;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+}
+
+.card-image picture .capa{
+    position: absolute;    
+    top: 0;
+    width: 100%;
+    height: 98.5%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 15px;    
+}
+
+.card-image picture:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-image picture .capa .icons{
+    margin-top: auto;  
+    color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px; 
+}
+
+.card-image picture .capa .icons i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0.8rem;
+    margin-right: 10px;
+    background-color: whitesmoke;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 100px){
+    .buscador{
+        width: 50px;
+    }
+    .finder{
+        width: 40px;
+    }
+    #content{
+        columns: 1;
+    }
+}
+
+@media (min-width: 728px){
+    .buscador{
+        width: 500px;
+    }
+    .finder{
+        width: 400px;
+    }
+    #content{
+        columns: 3;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .buscador{
+        width: 900px;
+    }
+    .finder{
+        width: 800px;
+    }
+    #content{
+        columns: 4;
+    }
+}
